@@ -1,5 +1,5 @@
-const BookModel = require("../../../models/BookModel");
-const UserModel = require("../../../models/UserModel");
+const BookModel = require("project/models/BookModel");
+const UserModel = require("project/models/UserModel");
 
 const createBook = async (request, reply) => {
   try {

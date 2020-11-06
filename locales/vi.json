@@ -1,3 +1,4 @@
 {
-	"Client IP {{clientIp}}": "Địa chỉ IP của bạn là {{clientIp}}"
+  "Client IP {{clientIp}}": "Địa chỉ IP của bạn là {{clientIp}}",
+  "Thanh cong": "Thành công"
 }

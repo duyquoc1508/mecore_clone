@@ -1,6 +1,6 @@
-const MeCore = require('mecore');
+const MeCore = require("mecore");
 
-const instanceName = 'demo';
+const instanceName = "demo";
 const meCore = new MeCore(instanceName, __dirname);
 
 meCore.Start();

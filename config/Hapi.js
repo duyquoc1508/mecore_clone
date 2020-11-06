@@ -17,7 +17,7 @@ module.exports = {
     jwt: {
       isActive: true,
       options: {
-        inject: ["Default", "Local", "DefaultWithPayload"],
+        inject: ["Default", "Local"],
         default: {
           strategy: "Default",
           payload: true,
@@ -33,10 +33,14 @@ module.exports = {
         },
         grouping: "tags",
         tags: [
-          // {
-          //   name: 'external-v2',
-          //   description: 'API nội bộ version 2'
-          // }
+          {
+            name: "external-v2",
+            description: "API nội bộ version 2",
+          },
+          {
+            name: "external-v2",
+            description: "API nội bộ version 2",
+          },
         ],
         tagsGroupingFilter: (tag) => {
           return true;

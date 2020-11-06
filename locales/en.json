@@ -2,5 +2,8 @@
 	"Client IP {{clientIp}}": "Client IP {{clientIp}}",
 	"\"x-api-client\" not found!": "\"x-api-client\" not found!",
 	"Thông tin xác thực không hợp lệ": "Thông tin xác thực không hợp lệ",
-	"Client IP 127.0.0.1": "Client IP 127.0.0.1"
+	"Client IP 127.0.0.1": "Client IP 127.0.0.1",
+	"Thanh cong": "Successs",
+	"Test": "Test",
+	"Test 1231231": "Test 1231231"
 }

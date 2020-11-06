@@ -12,7 +12,12 @@ module.exports = [
       description: "Create a new user",
       validate: {
         payload: Joi.object({
-          firstName: Joi.string().required().example("firstname"),
+          firstName: Joi.string()
+            .required()
+            .allow(null, "")
+            .valid("NU", "NAM")
+            //  .regex("")
+            .example("firstname"),
           lastName: Joi.string().required().example("lastname"),
           fullName: Joi.string().required().example("fullName"),
         }),

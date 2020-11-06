@@ -1,7 +1,17 @@
-const UserModel = require("../../../models/UserModel");
+const UserModel = require("project/models/UserModel");
+const _ = require("lodash");
+const jwt = require("jsonwebtoken");
+const AuthenticationConfig = require("project/config/Authentication");
 
 const createUser = async (request, reply) => {
   try {
+    const token = jwt.sign(
+      {
+        id: 2,
+      },
+      AuthenticationConfig.jwtSecretForKey
+    );
+    console.log(token);
     const newUser = await UserModel.create(request.payload);
     return reply
       .api({
@@ -17,6 +27,7 @@ const getUserProfile = async (request, reply) => {
   const { userId } = request.params;
   try {
     const userProfile = await UserModel.findOne({ id: userId });
+    console.log("firstname", _.get(userProfile, "firstName"));
     if (userProfile) {
       return reply
         .api({

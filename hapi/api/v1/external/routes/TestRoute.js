@@ -8,6 +8,8 @@ module.exports = [
     path: "/v1/test",
     handler(request, reply) {
       const payload = request.payload;
+      console.log("credentials", request.auth.credentials);
+
       return reply
         .api({
           test: request.i18n.__(`Client IP ${request.clientIp}`),
@@ -15,13 +17,11 @@ module.exports = [
         .code(1000);
     },
     options: {
-      auth: {
-        strategy: "Default",
-        payload: false,
-      },
       // auth: {
-      //   mode: "try",
+      //   strategy: "Default",
+      //   payload: false,
       // },
+      // auth: "Default",
       validate: {
         payload: Joi.object({
           firstname: Joi.string()

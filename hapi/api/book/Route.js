@@ -4,12 +4,12 @@ const Joi = require("mecore").Joi;
 module.exports = [
   {
     method: "POST",
-    path: "/books",
+    path: "/api/books",
     handler: BookModule.createBook,
     options: {
       auth: false,
       description: "Create a new book",
-      tags: ["api"],
+      tags: ["default"],
       validate: {
         payload: Joi.object({
           name: Joi.string().required().example("clean code"),

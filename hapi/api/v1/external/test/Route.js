@@ -22,10 +22,14 @@ module.exports = [
             .description("test"),
         }).label("PAYLOAD_TEST"),
       },
-      // tags: ["api", "internal", "v1"],
+      tags: ["api", "internal", "v1"],
       response: {
         status: {
           [ResponseCode.REQUEST_SUCCESS]: Joi.object({
+            test: Joi.string(),
+            message: Joi.string(),
+          }).label("TEST_SUCCESS"),
+          [1001]: Joi.object({
             test: Joi.string(),
           }).label("TEST_SUCCESS"),
         },

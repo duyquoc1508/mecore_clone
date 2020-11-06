@@ -1,9 +1,9 @@
 const AuthenticationConfig = require("../../config/Authentication");
 
 module.exports = {
-  key: AuthenticationConfig.jwtSecretKey,
+  key: AuthenticationConfig.jwtSecretForKey,
   async validate(decoded, request, reply) {
-    console.log("validate -> decoded", decoded);
+    //console.log("validate -> decoded", decoded);
     if (!decoded.id) {
       return { isValid: false };
     }
