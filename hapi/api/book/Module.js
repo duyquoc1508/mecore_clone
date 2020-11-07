@@ -1,5 +1,5 @@
-const BookModel = require("project/models/BookModel");
-const UserModel = require("project/models/UserModel");
+const BookModel = require("../../../models/BookModel");
+const UserModel = require("../../../models/UserModel");
 
 const createBook = async (request, reply) => {
   try {
@@ -30,9 +30,7 @@ const getBook = async (request, reply) => {
       select: "firstName lastName",
     });
     if (!book) {
-      return reply
-        .api({ message: `Book with id = ${bookId} not found` })
-        .code(404);
+      return reply.api({ message: `Book with id = ${bookId} not found` }).code(404);
     }
     return reply.api({ book });
   } catch (error) {

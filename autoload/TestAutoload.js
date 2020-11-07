@@ -1,18 +1,3 @@
-const Redis = require("ioredis");
-const redis = new Redis(); // uses defaults unless given configuration object
-
-// // ioredis supports all Redis commands:
-// redis.set("foo", "bar");
-
-// const redis = require("redis");
-// const client = redis.createClient();
-
-// client.on("error", function (error) {
-//   console.error(error);
-// });
-
-// client.set("key", "value", redis.print);
-
 module.exports = {
   isActive: false,
   onLoad: () => {

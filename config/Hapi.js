@@ -17,7 +17,9 @@ module.exports = {
     jwt: {
       isActive: true,
       options: {
-        inject: ["Default", "Local"],
+        // file in directory hapi/auth/prefixNameFile
+        inject: ["Default", "Local", "DefaultWithPayload", "Custom"],
+        // default using when route not declare "auth" field
         default: {
           strategy: "Default",
           payload: true,

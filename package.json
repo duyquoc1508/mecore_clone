@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon ./"
+    "start": "nodemon index.js"
   },
   "nodemonConfig": {
     "ignore": [
@@ -11,9 +11,7 @@
     "nodemon": "^2.0.6"
   },
   "dependencies": {
-    "hapi-auth-jwt2": "^10.2.0",
-    "ioredis": "^4.19.2",
-    "mecore": "^1.1.9",
-    "redis": "^3.0.2"
+    "bcrypt": "^5.0.0",
+    "mecore": "^1.1.9"
   }
 }
