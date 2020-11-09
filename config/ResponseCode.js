@@ -1,3 +1,5 @@
 module.exports = {
   REQUEST_SUCCESS: 1000,
+  UPDATE_SUCCESS: 1001,
+  REQUEST_FAIL: 2001,
 };

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
+    "ioredis": "^4.19.2",
     "mecore": "^1.1.9"
   }
 }

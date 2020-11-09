@@ -35,14 +35,10 @@ module.exports = {
         },
         grouping: "tags",
         tags: [
-          {
-            name: "external-v2",
-            description: "API nội bộ version 2",
-          },
-          {
-            name: "external-v2",
-            description: "API nội bộ version 2",
-          },
+          // {
+          //   name: "external-v2",
+          //   description: "API nội bộ version 2",
+          // },
         ],
         tagsGroupingFilter: (tag) => {
           return true;

@@ -25,6 +25,9 @@ const UserModel = {
       lastName: {
         type: String,
       },
+      birthday: {
+        type: Date,
+      },
     },
     {
       timestamps: true,
